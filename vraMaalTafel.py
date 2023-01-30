@@ -1,7 +1,14 @@
+#%%
 # Trek in die nodige pakette
 from random import seed
 from random import randint
+from playsound import playsound
 
+# pip install playsound==1.2.2 
+# Die 1.2.2 weergawe moet gebruik word, 
+# want latere weergawes werk nie
+
+#%%
 # Lukraak getal kies met 'n saadgetal
 seed(1)
 
@@ -15,5 +22,8 @@ for _ in range(10):
 
     if int(antwoord) == value * maaltafel:
         print('Reg')
+        playsound('Reg.mp3')
     else:
         print('Verkeerd')
+        playsound('Verkeerd.wav')
+# %%
